@@ -1,0 +1,11 @@
+
+.todo-list-container {
+    max-height: 40vh;
+    overflow-y: auto;
+  } 
+  @media (max-width: 640px) {
+    .todo-form-container {
+      margin-top: 1rem;
+    }
+  }
+  

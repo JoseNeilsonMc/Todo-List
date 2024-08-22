@@ -7,18 +7,51 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Dependências
+node_modules/
+.pnp
+.pnp.js
+# Ignorar lockfiles (caso você esteja usando um específico, mantenha o necessário)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
-# Editor directories and files
+# Diretórios de build/output
+dist/
+dist-ssr/
+build/
+out/
+.next/
+.cache/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Diretórios e arquivos de editor
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Test coverage
+coverage/
+*.lcov
+
+# Pastas temporárias e do sistema
+tmp/
+temp/
+
+# Arquivos relacionados ao serviço (como docker, se aplicável)
+.dockerignore
