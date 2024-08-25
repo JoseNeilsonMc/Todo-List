@@ -81,6 +81,7 @@ const LoginPage = () => {
         <form className="w-full flex flex-col gap-4" onSubmit={handleSubmit}>
           <input
             type="email"
+            name='email'
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -90,6 +91,7 @@ const LoginPage = () => {
           <div className="relative">
             <input
               type={showPassword ? 'text' : 'password'}
+              name='showPassword'
               placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
