@@ -5,16 +5,15 @@ import TodoListPage from "./pages/TodoListPage";
 import { useAuth } from "./hooks/useAuth";
 
 const App = () => {
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
+
+  if (loading) return <div>Loading...</div>;
 
   return (
     <Router>
       <Routes>
         <Route path="/login" element={<LoginPage />} />
-        <Route
-          path="/todos"
-          element={user ? <TodoListPage /> : <Navigate to="/login" />}
-        />
+        <Route path="/todos" element={user ? <TodoListPage /> : <Navigate to="/login" />} />
         <Route path="/" element={<Navigate to={user ? "/todos" : "/login"} />} />
       </Routes>
     </Router>
